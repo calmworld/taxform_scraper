@@ -6,7 +6,9 @@
 import scrapy
 
 
-class TaxformScraperItem(scrapy.Item):
+class Form(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    form_number = scrapy.Field()
+    form_title = scrapy.Field()
+    min_year = scrapy.Field()
+    max_year = scrapy.Field()

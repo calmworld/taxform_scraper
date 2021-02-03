@@ -1,7 +1,7 @@
 import scrapy
 from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
-# from taxform_scraper.items import taxform
+from taxform_scraper.items import Form
 
 class IrsSpider(CrawlSpider):
     name = 'irs'
@@ -12,16 +12,15 @@ class IrsSpider(CrawlSpider):
 
     rules = [
         Rule(
-            LinkExtractor(allow=r'\/[-A-Z0-9+&@#\/%=~_|$?!:,.]'), 
+            LinkExtractor(allow=r'\/[a-zA-Z0-9_]'), 
             callback='parse_info', 
             follow=True
         )
     ]
     def parse_info(self, response):
-        return {
-            'form_number': response.xpath('//option[@value="formNumber"]/text()').get(),
-            'form_title': response.xpath('//option[@value="title"]/text()').get(),
-            'min_year': response.xpath('//option[@value="currentYearRevDateString"]/text()').get(),
-            'max_year': response.xpath('//option[@value="currentYearRevDateString"]/text()').get()
-        }
-        
+        form = Form()
+        form['form_number']= response.xpath('normalize-space(//td[@class="LeftCellSpacer"]/text())').get()
+        form['form_title']= response.xpath('normalize-space(//td[@class="MiddleCellSpacer"]/text())').get()
+        form['min_year']= response.xpath('normalize-space(//td[@class="EndCellSpacer"]/text())isDescending=true').get()
+        form['max_year']= response.xpath('normalize-space(//td[@class="EndCellSpacer"]/text())').get()
+        return form

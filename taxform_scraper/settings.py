@@ -9,6 +9,11 @@
 
 BOT_NAME = 'taxform_scraper'
 
+CLOSESPIDER_PAGECOUNT=50
+
+# FEED_URI='forms.json'
+# FEED_FORMAT='json'
+
 SPIDER_MODULES = ['taxform_scraper.spiders']
 NEWSPIDER_MODULE = 'taxform_scraper.spiders'
 
