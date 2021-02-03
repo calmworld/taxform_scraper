@@ -11,18 +11,18 @@ Scrapy 2.4.1
 #### To run scrapy spider: 
 scrapy runspider irs.py
 
-#### To output data as JSON: 2 ways
-1- go to settings and uncomment FEED_URI & FEED_FORMAT
+#### To output data as JSON - 2 ways:
+- go to settings and uncomment FEED_URI & FEED_FORMAT
 or 
-2- run the command: scrapy runspider irs.py -s FEED_URI=forms.json -s FEED_FORMAT=json 
+- run the command: scrapy runspider irs.py -s FEED_URI=forms.json -s FEED_FORMAT=json 
 
-#### To Control Page Count Results
+#### To Control Page Count Results:
 go to settings.py and adjust CLOSESPIDER_PAGECOUNT=100
 
-#### To Check Page Count Results
+#### To Check Page Count Results:
 run the command: cat forms.json
 
-#### To export data as CSV and XML
+#### To export data as CSV and XML:
 simply replace json with either .csv or .xml
 
 
