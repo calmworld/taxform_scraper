@@ -21,6 +21,6 @@ class IrsSpider(CrawlSpider):
         form = Form()
         form['form_number']= response.xpath('normalize-space(//td[@class="LeftCellSpacer"])').get()
         form['form_title']= response.xpath('normalize-space(//td[@class="MiddleCellSpacer"]/text())').get()
-        form['min_year']= response.xpath('normalize-space(//td[@class="EndCellSpacer"]/text())').get()
-        form['max_year']= response.xpath('normalize-space(//td[@class="EndCellSpacer"]/text())').get()
+        form['min_year']= response.xpath('normalize-space(//td[@class="EndCellSpacer"])').get()
+        form['max_year']= response.xpath('normalize-space(//td[@class="EndCellSpacer"])').get()
         return form

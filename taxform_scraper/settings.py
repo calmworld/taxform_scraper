@@ -9,7 +9,7 @@
 
 BOT_NAME = 'taxform_scraper'
 
-CLOSESPIDER_PAGECOUNT=50
+CLOSESPIDER_PAGECOUNT=10
 
 # FEED_URI='forms.json'
 # FEED_FORMAT='json'
