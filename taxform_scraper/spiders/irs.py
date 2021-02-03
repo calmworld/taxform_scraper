@@ -1,7 +1,9 @@
 import scrapy
+
 from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
 from taxform_scraper.items import Form
+
 
 class IrsSpider(CrawlSpider):
     name = 'irs'
@@ -24,3 +26,4 @@ class IrsSpider(CrawlSpider):
         form['min_year']= response.xpath('normalize-space(//td[@class="EndCellSpacer"])').get()
         form['max_year']= response.xpath('normalize-space(//td[@class="EndCellSpacer"])').get()
         return form
+
