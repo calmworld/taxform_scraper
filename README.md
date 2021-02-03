@@ -12,8 +12,8 @@ Scrapy 2.4.1
 scrapy runspider irs.py
 
 #### To output data as JSON - 2 ways:
-- go to settings and uncomment FEED_URI & FEED_FORMAT
-or 
+- go to settings and uncomment FEED_URI & FEED_FORMAT.  
+or  
 - run the command: scrapy runspider irs.py -s FEED_URI=forms.json -s FEED_FORMAT=json 
 
 #### To Control Page Count Results:
