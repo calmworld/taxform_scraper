@@ -5,10 +5,13 @@
 
 import scrapy
 
-
 class Form(scrapy.Item):
     # define the fields for your item here like:
     form_number = scrapy.Field()
     form_title = scrapy.Field()
     min_year = scrapy.Field()
     max_year = scrapy.Field()
+
+# class MyPdf(scrapy.Item):
+#     file_urls = scrapy.Field()
+#     files = scrapy.Field()
