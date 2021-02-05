@@ -27,6 +27,7 @@ simply replace json with either .csv or .xml
 
 #### To Download PDF files:
 - run the command: scrapy runspider pdf.py
+- in download_pdf/standalone folder, run python3 main.py 2018 2020
 
 #### Project Challenges:
 - Getting min & max year was challenging becuase page source only indicated one tag "<td class="EndCellSpacer">".
