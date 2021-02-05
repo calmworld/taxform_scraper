@@ -29,3 +29,5 @@ simply replace json with either .csv or .xml
 #### Project Challenges:
 - Getting min & max year was challenging becuase page source only indicated one tag "<td class="EndCellSpacer">".
 - However there was "isDescending=true" in the href of the anchor tag, but that sorted all results, not a specific form.
+- Getting PDF files to download into a specific folder with the file name. I managed to get scrapy to create the folder. However the files were downloaded into the spiders folder.
+- Getting specific range of years was challenging as well. 
