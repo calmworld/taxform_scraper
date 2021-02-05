@@ -12,6 +12,6 @@ class Form(scrapy.Item):
     min_year = scrapy.Field()
     max_year = scrapy.Field()
 
-# class MyPdf(scrapy.Item):
-#     file_urls = scrapy.Field()
-#     files = scrapy.Field()
+class MyPdf(scrapy.Item):
+    file_urls = scrapy.Field()
+    files = scrapy.Field()
